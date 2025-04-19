@@ -19,7 +19,6 @@ This repository contains the implementation for **DA6401 – Assignment 2**, whi
 │
 ├── partB
 │   ├── main.ipynb                # Fine-tune pre-trained ResNet50
-│   └── utils.py                  # Data loading and model utility functions
 │
 ├── README.md
 └── requirements.txt
