@@ -57,7 +57,7 @@ Extract it into the root folder:
 ### Run Training:
 ```bash
 cd partA
-python train_scratch.py
+jupyter notebook main.ipynb
 ```
 
 ### Run wandb Sweep:
@@ -73,7 +73,7 @@ wandb agent <username>/<project>/<sweep-id>
 ### Run:
 ```bash
 cd partB
-python finetune_resnet.py
+jupyter notebook main.ipynb
 ```
 
 You can modify the freezing strategy and learning rate in the `wandb.init(config)` block.
