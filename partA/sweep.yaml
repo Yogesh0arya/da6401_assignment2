@@ -1,0 +1,40 @@
+sweep_config = """
+program: your_script_name.py
+method: bayes
+
+metric:
+  name: val_acc
+  goal: maximize
+
+parameters:
+  filters:
+    values:
+      - [32, 64, 128]
+      - [64, 128, 256]
+      - [32, 32, 64]
+
+  activation:
+    values: ["relu", "gelu", "silu", "mish"]
+
+  lr:
+    min: 0.0001
+    max: 0.01
+
+  dropout:
+    values: [0.0, 0.2, 0.3]
+
+  dense_neurons:
+    values: [128, 256, 512]
+
+  batch_size:
+    values: [32, 64]
+
+  conv_layers:
+    value: 3
+
+  kernel_size:
+    value: 3
+"""
+
+with open("sweep.yaml", "w") as f:
+    f.write(sweep_config)
